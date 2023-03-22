@@ -1,5 +1,3 @@
-able File  15 lines (14 sloc)  207 Bytes
-
 #include "main.h"
 
 /**
@@ -9,9 +7,12 @@ able File  15 lines (14 sloc)  207 Bytes
  */
 int _abs(int n)
 {
-	if (n >= 0)
+	if (n > 0)
 	{
 		return (n);
 	}
-	return (-n);
+	if (n < 0)
+	{
+		return (-n);
+	}
 }
