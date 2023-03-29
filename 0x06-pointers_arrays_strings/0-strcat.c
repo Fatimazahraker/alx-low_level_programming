@@ -11,6 +11,12 @@ char *_strcat(char *dest, char *src)
 {
 	int i, j;
 
+	if (src == NULL)
+	{
+		return (dest);
+	}
+	else
+	{
 	for (i = 0; dest[i] != '\0'; i++)
 	{
 	}
@@ -24,4 +30,5 @@ char *_strcat(char *dest, char *src)
 	dest[i] = '\0';
 
 	return (dest);
+	}
 }
