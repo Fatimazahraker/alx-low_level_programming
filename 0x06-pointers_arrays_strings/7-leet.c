@@ -8,10 +8,9 @@
  */
 char *leet(char *s)
 {
-	int i;
-
-	M[9] = {AEOTLaeotl};
-	N[9] = {4307143071};
+	int i, j;
+	char M[] = "AEOTLaeotl";
+	char N[] = "4307143071";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
