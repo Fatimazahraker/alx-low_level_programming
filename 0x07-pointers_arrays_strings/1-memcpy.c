@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 /**
- * _memcpy - fuction that copies memory area
+ *_memcpy - that copies memory area
  * @dest : first memory area
  * @src : second memory area
  * @n : number of bytes
- * Return : pointer to dest
+ * Return: pointer to dest
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
