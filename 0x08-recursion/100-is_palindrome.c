@@ -7,4 +7,14 @@
  * Return: return 0 or 1
  */
 
-int is_palindrome(ch
+int is_palindrome(char *s)
+{
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+
+	if (l != i / 2)
+	{
+		if 
+
