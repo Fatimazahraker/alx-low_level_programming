@@ -6,7 +6,7 @@
 /**
  * malloc_checked - allocates memory using malloc.
  * @b: integr
- * return: null or pointer
+ * Return: null or pointer
  */
 
 void *malloc_checked(unsigned int b)
