@@ -4,9 +4,9 @@
 #include <string.h>
 /**
  * *string_nconcat - function that concatenates two strings.
- * @s1: first string 
+ * @s1: first string
  * @s2: second string
- * @n number of bytes
+ * @n: number of bytes
  * Return: null or string
  */
 
@@ -30,7 +30,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		if (ptr == NULL)
 			return (NULL);
 	for (i = 0; i < size1; i++)
-			ptr[i] = s1[i];
+	{
+		ptr[i] = s1[i];
+	}
 	for (k = 0; k < len; k++)
 	{
 		ptr[i] = s2[k];
