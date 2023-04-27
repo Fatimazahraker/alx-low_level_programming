@@ -2,14 +2,14 @@
 
 /**
  * print_list - function that print all the element of list
- * @*h: list of type list_t
+ * @h: list of type list_t
  * Return: number of nodes
  */
 
 size_t print_list(const list_t *h)
 {
 	size_t node = 0;
-	
+
 	while (h != NULL)
 	{
 		if (h->str == NULL)
