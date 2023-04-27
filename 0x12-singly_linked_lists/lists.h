@@ -14,10 +14,10 @@
  */
 typedef struct list_s
 {
-  char *str;
-  unsigned int len;
-  struct list_s *next;
-}list_t;
+	char *str;
+	unsigned int len;
+	struct list_s *next;
+} list_t;
 void liebre_tortuga(void) __attribute__ ((constructor));
 list_t *add_node(list_t **head, const char *str);
 void free_list(list_t *head);
