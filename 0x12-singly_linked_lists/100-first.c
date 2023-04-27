@@ -1,5 +1,6 @@
 #include "lists.h"
 
+void leibre_tortuga(void) __attribute__((constructor));
 /**
  * leibre_tortuga - fuction execute before main
  **/
