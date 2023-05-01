@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * listint-len - return the numebr of elements in  a list
+ * listint_len - return the numebr of elements in  a list
  * @h: list
  * Return: the size of list
  */
