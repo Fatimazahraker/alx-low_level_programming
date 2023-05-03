@@ -8,31 +8,44 @@
 
 size_t free_listint_safe(listint_t **h)
 {
-	size_t node = 0;
-	int i;
-	listint_t *tmp;
+	listint_t *list, *aux1 = *h, *aux2 = *h, *l;
+	int size = 0;
 
-	if (!h || !*h)
-		return(0);
-
-	while(*h)
+	if (*h)
 	{
-		i =*h - (*h)->next;
-		if (i > 0)
+		while (aux1 && aux1->next)
 		{
-			tmp = (*h)->next;
-			free(*h);
-			*h = tmp;
-			node++;
+			aux2 = aux2->next;
+			aux1 = aux1->next->next;
+			if ((aux1 == aux2) && aux2 != NULL)
+				break;
 		}
-		else
+		if (aux1 == aux2)
 		{
-			free (*h);
-			*h = NULL;
-			node++;
-			break;
+			l = aux2;
+			aux2 = *h;
+			if (aux2 == l)
+			{
+				aux1 = aux1->next;
+				aux1->next = NULL;
+			}
+			else
+			{
+				while (aux1 != aux2)
+				{
+					l = aux1;
+					aux2 = aux2->next;
+					aux1 = aux1->next;
+				}
+				l->next = NULL;
+			}
+		}
+		while ((list = *h))
+		{
+			*h = (*h)->next;
+			size++;
+			free(list);
 		}
 	}
-	*h = NULL;
-	return (node);
+	return (size);
 }
