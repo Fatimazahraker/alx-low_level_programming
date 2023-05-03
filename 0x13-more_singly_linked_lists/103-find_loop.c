@@ -20,7 +20,7 @@ listint_t *find_listint_loop(listint_t *head)
 				break;
 		}
 
-		if (!chain1 || chain1->next)
+		if (!chain1 || !chain1->next)
 			return (NULL);
 		chain2 = head;
 
