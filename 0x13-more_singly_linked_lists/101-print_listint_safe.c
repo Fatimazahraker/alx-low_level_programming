@@ -9,35 +9,31 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	const listint_t *chain1, *chain2;
-	size_t node;
+	size_t node = 0, i = 0;
 
-	if (!head)
-		exit(98);
-
-	chain1 = chain2 = head;
-	node = 0;
-	while (chain2 && chain2->next)
+	if (head)
 	{
-		node++;
+		chain1 = head;
+	while (chain1->next)
+	{
+		chain2 = head;
+		i = 0;
+		printf("[%p] %d\n", (void *)chain1, chain1->n);
 		chain1 = chain1->next;
-		chain2 = chain2->next->next;
-
-		if (chain1 == chain2)
+		node++;
+		while (i < node)
 		{
-			chain1 = head;
-			while (chain1 != chain2)
+			if (chain1 == chain2)
 			{
-				node++;
-				chain1 = chain1->next;
-				chain2 = chain2->next;
-
+				printf("-> [%p] %d\n", (void *) chain2, chain2->n);
+				return (node);
 			}
-			printf("-> [%p] %d\n", (void *) chain2, chain2->n);
-			exit(98);
+			chain2 = chain2->next;
+			i++;
 		}
-		printf("-> [%p] %d\n", (void *) chain1, chain1->n);
 	}
-	node++;
-	printf("-> [%p] %d\n", (void *) chain2, chain2->n);
+		printf("[%p] %d\n", (void *)chain1, chain1->n);
+		node++;
+	}
 	return (node);
 }
