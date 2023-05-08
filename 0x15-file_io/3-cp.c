@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 			free(buffer);
 			exit(98);
 		}
-		w = write(f1, buffer, r);
+		w = write(f2, buffer, r);
 		if (f2 == -1 || w == -1)
 		{
 			dprintf(STDERR_FILENO, 
