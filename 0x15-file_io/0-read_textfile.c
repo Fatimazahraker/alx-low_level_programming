@@ -4,7 +4,7 @@
  * read_textfile - reads a text file and prints it to the POSIX standard output
  * @filename: file name
  * @letters: number of letters
- * Return: 0 if failled or number of letters 
+ * Return: 0 if failled or number of letters
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
@@ -27,8 +27,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(buffer);
 		return (0);
 	}
-
 	free(buffer);
 	close(o);
-	return (r);
+	return (w);
 }
