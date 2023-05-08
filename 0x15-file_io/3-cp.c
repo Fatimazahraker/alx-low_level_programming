@@ -35,7 +35,7 @@ int main(int argc, char **argv)
 			exit(98);
 		}
 		w = write(f1, buffer, r);
-		if (f1 == -1 || w == -1)
+		if (f2 == -1 || w == -1)
 		{
 			dprintf(STDERR_FILENO, 
 					"Error: Can't write to %s\n", argv[2]);
