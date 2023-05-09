@@ -24,7 +24,7 @@ int main(int argc, char **argv)
 		exit(99);
 	}
 	f1 = open(argv[1], O_RDONLY);
-	r = read(f1, buffer, 10240);
+	r = read(f1, buffer, 1024);
 	f2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do{
